@@ -1,5 +1,5 @@
 variable "filters" {
-  type = string(map)
+  type = map(string)
   default = {
     name = "al2023-ami-2023*"
   }
