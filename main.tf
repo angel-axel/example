@@ -24,3 +24,8 @@ data "aws_ami" "ami" {
     }
   }
 }
+
+resource "aws_instance" "simple_instance" {
+  ami = data.aws_ami.ami.id
+  instance_type = var.instance_type
+}
